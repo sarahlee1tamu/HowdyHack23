@@ -235,3 +235,10 @@ a#next_page_button{
     width: 85%;
     margin-left: 35px;
 }
+
+.cost_label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 10%;
+}
