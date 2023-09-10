@@ -1,302 +1,272 @@
- 
-<html>
- 
-<head>
-        <title>Your Diner</title>
-         
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    
-    
+ <html>
 
- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
- 
- 
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
-		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+ <head>
+ 	<title>Your Diner</title>
 
-		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
-		 
-		 
-		 <style>
-         
-              *{
-	margin:0;
-	padding:0;
-}
-body{
-	background:#f8ebd6;	
-	color:#444;
-	font-size:11px;
-	color: #333;
-    font-family: 'Oswald', sans-serif;
-}
+ 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
- 
-.booklet{
-	width:900px;
-	height:607px;
-	position:relative;
-	margin:0 auto 10px;
-	-moz-box-shadow:0px 0px 1px #fff;
-	-webkit-box-shadow:0px 0px 1px #fff;
-	box-shadow:0px 0px 1px #fff;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-}
-.booklet .b-wrap-left  {
-	background:#fff url(images/left_bg.jpg) no-repeat top left;
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-bottom-left-radius: 10px;
-	-moz-border-radius-topleft:10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}
-.booklet .b-wrap-right {
-	background:#efefef url(images/right_bg.jpg) no-repeat top left;
-	-webkit-border-top-right-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	-moz-border-radius-topright: 10px;
-	-moz-border-radius-bottomright: 10px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-.booklet .b-counter {
-	bottom:10px;
-	position:absolute;
-	display:block;
-	width:90%;
-	height:20px;
-	border-top:1px solid #ddd;
-	color:#222;
-	text-align:center;
-	font-size:12px;
-	padding:5px 0 0;
-	background:transparent;
-	-moz-box-shadow:0px -1px 1px #fff;
-	-webkit-box-shadow:0px -1px 1px #fff;
-	box-shadow:0px -1px 1px #fff;
-	opacity:0.8;
-}
-.book_wrapper{
-	margin:0 auto;
-	padding-top:50px;
-	width:905px;
-	height:540px;
-	position:relative;
-	background:transparent url(images/bg.png) no-repeat 9px 27px;
-}
-.book_wrapper h1{
-	color:rgb(255, 0, 208);
-	margin:5px 5px 5px 15px;
-	font-size:24px;
-	background:transparent url(images/h1.png) no-repeat bottom left;
-	padding-bottom:7px;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-.book_wrapper p{
-	font-size:15px;
-	margin:5px 5px 5px 15px;
-}
-.book_wrapper a.article,
-.book_wrapper a.demo{
-	background:transparent url(images/circle.png) no-repeat 50% 0px;
-	display:block;
-	width:95px;
-	height:41px;
-	text-decoration:none;
-	outline:none;
-	font-size:16px;
-	color:#555;
-	float:left;
-	line-height:41px;
-	padding-left:47px;
-}
-.book_wrapper a.demo{
-	margin-left:50px;
-}
-.book_wrapper a.article:hover,
-.book_wrapper a.demo:hover{
-	background-position:50% -41px;
-	color:#13386a;
-}
-.book_wrapper img{
-	margin:10px 0px 5px 35px;
-	width:300px;
-	padding:4px;
-	border:1px solid #ddd;
-	-moz-box-shadow:1px 1px 1px #fff;
-	-webkit-box-shadow:1px 1px 1px #fff;
-	box-shadow:1px 1px 1px #fff;
-}
-.booklet .b-wrap-right img{
-	border:1px solid #E6E3C2;
-}
-a#next_page_button{
-	display:none;
-	position:absolute;
-	width:41px;
-	height:40px;
-	cursor:pointer;
-	margin-top:-20px;
-	top:50%;
-	background:transparent url(images/buttons.png) no-repeat 0px -40px;
-}
-a#prev_page_button{
-	display:none;
-	position:absolute;
-	width:41px;
-	height:40px;
-	cursor:pointer;
-	margin-top:-20px;
-	top:50%;
-	background:transparent url(images/buttons.png) no-repeat 0px -40px;
-}
-a#prev_page_button{
-	left:-30px;
-}
-a#next_page_button{
-	right:-30px;
-	background-position:-41px -40px;
-}
-a#next_page_button:hover{
-	background-position:-41px 0px;
-}
-a#prev_page_button:hover{
-	background-position:0px 0px;
-}
- 
-    
-    
-         </style>
-		 
-    </head>
-    <body>
-    <br><br><br><br><br>
-		 
-		<div class="book_wrapper">
-			<a id="next_page_button"></a>
-			<a id="prev_page_button"></a>
-			 
-			<div id="mybook" style="display:none;">
-				<div class="b-load">
-					<div>
-						<h1>ALL-DAY BREAKFAST</h1>
-						<img src="images/pancakes.jpg" alt="" style="width:300px;height:120px"/>
-						<h3>Pancakes</h3>
-						<br>
-						<ul>
-						<li><b>Berrylicious Pancakes - $7.99 </b>
-						<br>&emsp;
-							A colorful, berry-filled pancake extravaganza featuring a medley of fresh strawberries, blueberries, and raspberries. Crowned with a swirl of vanilla cream and a dusting of powdered sugar for that classic diner touch.</li>
-						<br>
-						<li><b>Funky Monkey Pancakes - $8.99 </b> 
-						<br>&emsp;
-							A stack of fluffy pancakes infused with ripe banana slices and rich chocolate chips, topped with a decadent caramel sauce and a sprinkle of powdered sugar.</li>
-						<br>
-						<li><b>Honey Heaven Pancakes - $7.99</b> 
-						<br>&emsp;
-						Classic buttermilk pancakes drizzled with warm, golden honey, creating a sweet and comforting breakfast that tastes like a warm embrace.</li>
-						<br>
-						<li><b>Chocoholic Pancakes - $8.99</b> 
-							<br>&emsp;
-							Decadent buttermilk pancakes infused with rich cocoa, topped with a velvety chocolate sauce, and garnished with chocolate shavings for an indulgent chocolate lover's dream.</li>
-						<!-- <a href="" class="article">ARTICLE</a>
-						<a href="" class="demo">DEMO</a> -->
-					</ul>
-					</div>
-					<div>
-						<img src="images/waffles.jpg" alt="" style="width=300px;height120px" />
-						<h3>Waffles</h3>
-						<br>
-						<li>Southern Fried Chicken & Waffles: A classic Southern comfort dish featuring crispy fried chicken served on top of a golden, fluffy waffle. Drizzled with warm maple syrup, this dish strikes the perfect balance between sweet and savory.</li>
-                        <li>Confetti Celebration Waffles: These whimsical waffles are like a party on a plate! Sprinkled with colorful confetti sprinkles and topped with a dollop of whipped cream, they're a delightful treat that will make your taste buds dance.</li>
-                        <li>Waffle Sundae Extravaganza: Indulge in a sweet sensation with our Waffle Sundae Extravaganza. A warm, crispy waffle serves as the base for a scoop of creamy vanilla ice cream, generously drizzled with hot fudge, and finished with whipped cream and a cherry on top. It's the ultimate dessert-meets-breakfast experience.</li>
-					</div>
-					<div>
-						<img src="images/kids.jpg" alt="" style="width=300px;height120px"/>
-						<h5>Diner Delight Breakfast</h5>
-						<li>: Indulge in the Diner Delight Breakfast, featuring two mini pancakes, eggs cooked to taste, a side of hashbrowns or potatoes, and your choice of sausage or bacon. It's a taste of nostalgia in every bite.</li>
-						<!--add a space here-->
-						<h4>Kid's Menu</h4>
-						<h5>Rocket Nuggets & Cosmic Fries</h5>
-						<ul>
-							<li>Blast off with our delicious chicken nuggets and seasoned star-shaped fries for an out-of-this-world meal.</li>
-						</ul>
-					</div>
-					<div>
-						<img src="images/dinner.jpg" alt="" style="width=300px;height120px"/>
-						<h5>Lunch</h5>
-						<li>Classic Diner Burger: A timeless favorite featuring a juicy beef patty, lettuce, tomato, pickles, onions, all served on a toasted bun. It's a burger like Grandma used to make.</li>
-                        <li>Texas Toast BLT: Experience a crispy twist on the classic BLT with thick-cut Texas toast, stacked high with crisp bacon, fresh lettuce, and ripe tomatoes. Served with a side of nostalgia.</li>
-                        <li>House Special Double Patty Burger: Our signature creation! Two mouthwatering beef patties cooked to perfection, topped with melted cheese and smothered in our house-made special sauce. It's a double delight for burger lovers.</li>
-                        <p>*House Fries inclusive for all</p>
-					</div>
-					<div>
-						<img src="images/desert.jpg" alt="" style="width=300px;height120px"/>
-						<h5>Dessert</h5>
-						<ul>
-							<li>Sundae Sensation: A classic sundae served in a tall glass, featuring scoops of creamy vanilla ice cream topped with your choice of hot fudge, whipped cream, nuts, and a maraschino cherry.</li>
-							<li>Banana Boat Split: Indulge in the ultimate banana split experience with a ripe banana split down the middle, cradling three generous scoops of ice cream (chocolate, vanilla, and strawberry) and drizzled with hot fudge, strawberry sauce, and crushed nuts. Finished with whipped cream and cherries on top.</li>
-							<li>Grandma's Warm and Chewy Cookies: Satisfy your sweet tooth with a plate of Grandma's homemade cookies. These warm and chewy delights are baked to perfection, offering a comforting taste of nostalgia. Choose from chocolate chip, oatmeal raisin, or peanut butter, and pair them with a glass of milk for the perfect treat.</li>
-						</ul>
-					</div>
-					<div>
-						<img src="images/drinks.jpg" alt="" style="width=300px;height120px"/>
-						<h5>Drinks</h5>
-                    <ul>
-                        <li>Creamy Dream Shake: A velvety blend of rich ice cream and your choice of flavors(vanilla, strawberry, and chocolate), served in a frosty glass, and topped with a mountain of whipped cream and a cherry.</li>
-                        <li>Sunshine Sipper: Freshly squeezed orange juice that bursts with citrusy goodness, served cold to kickstart your day with a refreshing zing.</li>
-                        <li>Orchard Elixir: Pure, crisp apple juice straight from the farm, chilled to perfection, and guaranteed to remind you of biting into a juicy apple on a sunny day.</li>
-                        <li>Rio's Diner Brew: A hearty cup of freshly brewed coffee with a robust flavor and a hint of nostalgia. It's the perfect pick-me-up to accompany your meal.</li>
-                        <li>Soda Pop Fizz: Take your pick from a variety of classic carbonated beverages, all served over crushed ice with the satisfying fizz of a bygone era. From cola to root beer, it's the taste of nostalgia in a glass.</li>
-                    </ul>
-					</div>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
+
+ 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+ 	<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+ 	<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+ 	<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+ 	<link rel="stylesheet" href="index.css">
+
+ </head>
+
+ <body>
+ 	<br><br><br><br><br>
+
+ 	<div class="book_wrapper">
+ 		<a id="next_page_button"><img src="images/spoon.png" alt=""></a>
+ 		<a id="prev_page_button"><img src="images/fork.png" alt=""></a>
+
+ 		<div id="mybook" style="display:none;">
+ 			<div class="b-load">
+ 				<div>
+					<br>
+					<br>
+ 					<img src="images/pancakes.jpg" alt="" style="width:300px;height:120px" />
+					<br>
+					<br>
+					<br>
+ 					<h8>Pancakes</h8>
+ 					<br>
 					
-			</div>
-		</div>
-        
-        <script type="text/javascript">
-			$(function() {
-				var $mybook 		= $('#mybook');
-				var $bttn_next		= $('#next_page_button');
-				var $bttn_prev		= $('#prev_page_button');
-				var $loading		= $('#loading');
-				var $mybook_images	= $mybook.find('img');
-				var cnt_images		= $mybook_images.length;
-				var loaded			= 0;
-				 
-				$mybook_images.each(function(){
-					var $img 	= $(this);
-					var source	= $img.attr('src');
-					$('<img/>').load(function(){
-						++loaded;
-						if(loaded == cnt_images){
-							$loading.hide();
-							$bttn_next.show();
-							$bttn_prev.show();
-							$mybook.show().booklet({
-								name:               null,                            //  
-								width:              800,                             //  
-								height:             500,                             //   
-								speed:              600,                             //  
-								direction:          'LTR',                           //  
-								                           //  
-								next:               $bttn_next,          			//  
-								prev:               $bttn_prev,          			//  
-								                       
-							});
-							Cufon.refresh();
-						}
-					}).attr('src',source);
-				});
-				
+ 					
+ 						<h9><b>Berrylicious Pancakes - $7.99 </b></h9>
+ 							<br>&emsp;
+ 							A colorful, berry-filled pancake extravaganza featuring a medley of fresh strawberries,
+ 							blueberries, and raspberries. Crowned with a swirl of vanilla cream and a dusting of
+ 							powdered sugar for that classic diner touch.
+ 						<br>
+						<br>
+ 						<h9><b>Funky Monkey Pancakes - $8.99 </b></h9>
+ 							<br>&emsp;
+ 							A stack of fluffy pancakes infused with ripe banana slices and rich chocolate chips, topped
+ 							with a decadent caramel sauce and a sprinkle of powdered sugar.
+ 						<br>
+						<br>
+ 						<h9><b>Honey Heaven Pancakes - $7.99</b></h9>
+ 							<br>&emsp;
+ 							Classic buttermilk pancakes drizzled with warm, golden honey, creating a sweet and
+ 							comforting breakfast that tastes like a warm embrace.
+ 						<br>
+						<br>
+ 						<h9><b>Chocoholic Pancakes - $8.99</b></h9>
+ 							<br>&emsp;
+ 							Decadent buttermilk pancakes infused with rich cocoa, topped with a velvety chocolate
+ 							sauce, and garnished with chocolate shavings for an indulgent chocolate lover's dream.
+ 						<!-- <a href="" class="article">ARTICLE</a>
+						<a href="" class="demo">DEMO</a> -->
+ 					
+ 				</div>
+ 				<div>
+					<br>
+					<br>
+ 					<img src="images/waffles.jpg" alt="" class = "image" />
+					<br>
+					<br>
+					<br>
+ 					<h8>Waffles</h8>
+ 					<br>
+ 					<h9><b>Southern Fried Chicken & Waffles - $10.99</b></h9>
+						<br>&emsp; 
+						A classic Southern comfort dish featuring crispy fried
+ 						chicken served on top of a golden, fluffy waffle. Drizzled with warm maple syrup, this dish
+ 						strikes the perfect balance between sweet and savory.
+					<br>
+					<br>
+ 					<h9><b>Confetti Celebration Waffles - $7.99</b> </h9>
+						<br>&emsp;
+						These whimsical waffles are like a party on a plate! Sprinkled
+ 						with colorful confetti sprinkles and topped with a dollop of whipped cream, they're a
+ 						delightful treat that will make your taste buds dance.
+					<br>
+					<br>
+ 					<h9><b>Waffle Sundae Extravaganza - $8.99</b></h9>
+						<br>&emsp;
+						Indulge in a sweet sensation with our Waffle Sundae Extravaganza. A
+ 						warm, crispy waffle serves as the base for a scoop of creamy vanilla ice cream, generously
+ 						drizzled with hot fudge, and finished with whipped cream and a cherry on top. It's the ultimate
+ 						dessert-meets-breakfast experience.
+					<br>
+					<br>
+					<h1>ALL-DAY BREAKFAST</h1>
+
+					<div class="right-aligned-text">
+						<h10>24-hours Monday-Saturday</h10>
+					  </div>
+					
+ 				</div>
+ 				<div>
+					<br>
+					<br><br><br><br>
+ 					<img src="images/kids.jpg" alt="" class = "image" />
+ 					<br><br>
+					<br>
+					<br>
+ 					<h8><b>Diner Delight Breakfast - $8.99</b></h8>
+						<br>&emsp;
+						Indulge in the Diner Delight Breakfast, featuring two mini pancakes, eggs cooked to taste, a
+ 						side of hashbrowns or potatoes, and your choice of sausage or bacon. It's a taste of nostalgia
+ 						in every bite.
+					<br><br>
+					<br>
+ 					<br>
+ 					<h8><b>Kid's Menu</b></h8>
+					<br>
+ 					<h9><b>Rocket Nuggets & Cosmic Fries - $5.99</b></h9>
+						<br>&emsp;
+						Blast off with our delicious chicken nuggets and seasoned star-shaped fries for an
+						out-of-this-world meal.
+ 				</div>
+ 				<div>
+					<br><br><br><br>
+ 					<img src="images/dinner.jpg" alt="" class = "image" />
+					<br><br>
+					<br>
+ 					<h8>Lunch</h8>
+					<br>
+					
+ 					<h9><b>Classic Diner Burger - $10.99</b> </h9>
+						<br>&emsp;
+						A timeless favorite featuring a juicy beef patty, lettuce, tomato,
+ 						pickles, onions, all served on a toasted bun. It's a burger like Grandma used to make.
+						<br><br>
+ 					<h9><b>Texas Toast BLT - $9.99</b> </h9>
+						<br>&emsp;
+						Experience a crispy twist on the classic BLT with thick-cut Texas toast,
+ 						stacked high with crisp bacon, fresh lettuce, and ripe tomatoes. Served with a side of
+ 						nostalgia.
+						<br><br>
+ 					<h9><b>House Special Double Patty Burger - $12.99</b> </h9>
+						<br>&emsp;
+						Our signature creation! Two mouthwatering beef patties
+ 						cooked to perfection, topped with melted cheese and smothered in our house-made special sauce.
+ 						It's a double delight for burger lovers.
+						<br><br>
+						<div class="right-aligned-text">
+							
+							<h10><p><h7>*</h7>House Fries inclusive for all</p></h10>
+						  </div>
+ 					
+ 				</div>
+ 				<div>
+					<br><br><br>
+ 					<img src="images/desert.jpg" alt="" class = "image" />
+					<br><br><br>
+ 					<h8>Dessert</h8>
+					<br>
+ 					<ul>
+ 						<h9><b>Sundae Sensation - $4.99</b></h9>
+							<br>&emsp;
+							A classic sundae served in a tall glass, featuring scoops of creamy
+ 							vanilla ice cream topped with your choice of hot fudge, whipped cream, nuts, and a
+ 							maraschino cherry.
+							<br>
+							<br>
+ 						<h9><b>Banana Boat Split - $6.99</b></h9>
+							<br>&emsp; Indulge in the ultimate banana split experience with a ripe banana split
+ 							down the middle, cradling three generous scoops of ice cream (chocolate, vanilla, and
+ 							strawberry) and drizzled with hot fudge, strawberry sauce, and crushed nuts. Finished with
+ 							whipped cream and cherries on top.
+							<br>
+							<br>
+ 						<h9><b>Grandma's Warm and Chewy Cookies - $1.50</b> </h9>
+							<br>&emsp;Satisfy your sweet tooth with a plate of Grandma's
+ 							homemade cookies. These warm and chewy delights are baked to perfection, offering a
+ 							comforting taste of nostalgia. Choose from chocolate chip, oatmeal raisin, or peanut
+ 							butter, and pair them with a glass of milk for the perfect treat.
+							<br>
+ 					</ul>
+ 				</div>
+ 				<div>
+					<br>
+ 					<img src="images/drinks.jpg" alt="" class = "image" />
+					<br><br>
+ 					<h8>Drinks</h8>
+					<br>
+ 						<h9><b>Creamy Dream Shake - $4.99</b></h9>
+							<br>&emsp;
+							 A velvety blend of rich ice cream and your choice of flavors(vanilla,
+ 							strawberry, and chocolate), served in a frosty glass, and topped with a mountain of whipped
+ 							cream and a cherry.
+							<br>
+							<br>
+ 						<h9><b>Sunshine Sipper - $2.99</b></h9>
+							<br>&emsp;
+							Freshly squeezed orange juice that bursts with citrusy goodness, served
+ 							cold to kickstart your day with a refreshing zing.
+							<br>
+							<br>
+ 						<h9><b>Orchard Elixir - $2.99 </b> </h9>
+							<br>&emsp;
+							Pure crisp apple juice straight from the farm, chilled to perfection, and
+ 							guaranteed to remind you of biting into a juicy apple on a sunny day.
+							<br>
+							<br>
+ 						<h9><b>Rio's Diner Brew - $1.99</b> </h9>
+							<br>&emsp;
+							A hearty cup of freshly brewed coffee with a robust flavor and a hint of
+ 							nostalgia. It's the perfect pick-me-up to accompany your meal.
+							<br>
+							<br>
+ 						<h9><b>Soda Pop Fizz - $0.99</b> </h9>
+							<br>&emsp;
+							Take your pick from a variety of classic carbonated beverages, all served
+ 							over crushed ice with the satisfying fizz of a bygone era. From cola to root beer, it's the
+ 							taste of nostalgia in a glass.
+ 				</div>
+
+ 			</div>
+ 		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function () {
+			var $mybook = $('#mybook');
+			var $bttn_next = $('#next_page_button');
+			var $bttn_prev = $('#prev_page_button');
+			var $loading = $('#loading');
+			var $mybook_images = $mybook.find('img');
+			var cnt_images = $mybook_images.length;
+			var loaded = 0;
+
+			$mybook_images.each(function () {
+				var $img = $(this);
+				var source = $img.attr('src');
+				$('<img/>').load(function () {
+					++loaded;
+					if (loaded == cnt_images) {
+						$loading.hide();
+						$bttn_next.show();
+						$bttn_prev.show();
+						$mybook.show().booklet({
+							name: null, //  
+							width: 800, //  
+							height: 500, //   
+							speed: 600, //  
+							direction: 'LTR', //  
+							//  
+							next: $bttn_next, //  
+							prev: $bttn_prev, //  
+
+						});
+						Cufon.refresh();
+					}
+				}).attr('src', source);
 			});
-        </script>
- 
-    </body>
- 
-</html>
+
+		});
+	</script>
+
+ </body>
+
+ </html>
+
