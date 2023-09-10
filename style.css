@@ -2,7 +2,7 @@ body, html {
     width: 100%;
     margin: 0pt;
     overflow: hidden;
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Bungee Inline', cursive;
 }
 
 .bg {
@@ -27,6 +27,7 @@ body, html {
     bottom: 20%;
     left: 42%;
     position: absolute;
+    font-family: inherit;
 }
 
 .butt button {
