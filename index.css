@@ -242,3 +242,29 @@ a#next_page_button{
 	align-items: center;
 	bottom: 10%;
 }
+.header {
+    text-align: center;
+}
+h1 {
+    font: 4rem 'Bevan', serif;
+    color: #f9da8a;
+    text-shadow:
+        3px 3px 0 #000,
+        -3px 3px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000;
+}
+
+.nextbutt {
+	left: 46%;
+	position: absolute;
+	font-family: inherit;
+}
+
+.nextbutt button {
+	font-size: xx-large;
+    font-family:inherit;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: #ebe3e5;
+}
