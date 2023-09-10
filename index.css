@@ -235,3 +235,16 @@ a#next_page_button{
     width: 85%;
     margin-left: 35px;
 }
+
+.header {
+    text-align: center;
+}
+h1 {
+    font: 4rem 'Bevan', serif;
+    color: #f9da8a;
+    text-shadow:
+        3px 3px 0 #000,
+        -3px 3px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000;
+}
