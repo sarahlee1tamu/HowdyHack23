@@ -68,11 +68,53 @@ body{
 	background:transparent url(images/bg.png) no-repeat 9px 27px;
 }
 .book_wrapper h1{
-	color:rgb(255, 0, 208);
+	color:#fb4393;
 	margin:20px 5px 5px 15px;
-	font-size:24px;
+	font-size:28px;
 	background:transparent url(images/h1.png) no-repeat bottom left;
 	padding-bottom:7px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.book_wrapper h8{
+	color:#fb4393;
+    /* margin: ; */
+    font-size:15px;
+    font-weight: normal;
+    ;
+}
+
+.book_wrapper h10{
+	color:#333;
+    /* text-align: right; */
+    font-size:10px;
+    font-weight: normal;
+}
+
+
+.book_wrapper h9{
+	color:#348cec;
+    /* margin:20px 5px 5px 15px; */
+    font-size:11px;
+    font-weight: normal;
+}
+
+.book_wrapper h6{
+	color:#348cec;
+	margin:20px 5px 5px 15px;
+	font-size:18px;
+	background:transparent url(images/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.book_wrapper h7{
+	color:#f9da8a;
+	margin:20px 5px 5px 15px;
+	font-size:18px;
+	background:transparent url(images/h1.png) no-repeat bottom left;
+	/* padding-bottom:7px; */
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -118,8 +160,8 @@ body{
 a#next_page_button{
 	display:none;
 	position:absolute;
-	width:65px;
-	height:65px;
+	width:70px;
+	height:70px;
 	cursor:pointer;
 	margin-top:-20px;
 	top:50%;
@@ -127,8 +169,8 @@ a#next_page_button{
 
 }
 a#next_page_button>img{
-width: 65px;
-height: 65px;
+width: 70px;
+height: 70px;
 object-fit: scale-down;
 border-style: hidden;
 box-shadow: none;
@@ -137,23 +179,23 @@ box-shadow: none;
 a#prev_page_button{
 	display:none;
 	position:absolute;
-	width:65px;
-	height:65px;
+	width:70px;
+	height:70px;
 	cursor:pointer;
 	margin-top:-20px;
 	top:50%;
     left:-100px;
 }
 a#prev_page_button>img{
-width: 65px;
-height: 65px;
+width: 70px;
+height: 70px;
 object-fit: scale-down;
 border-style: hidden;
 box-shadow: none;
 }
 
 a#next_page_button{
-	right:-30px;
+	right:-40px;
 	background-position:-41px 0px;
 }
 /* a#next_page_button:hover{
@@ -167,3 +209,6 @@ a#next_page_button{
     width: 300px;
     height: 120px;
 }
+.right-aligned-text {
+    text-align: right;
+  }
