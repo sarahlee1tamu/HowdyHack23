@@ -17,9 +17,16 @@
                 width: 100%;
                 margin: 0;
             }
+
+            .fade-in-image { animation: fadeIn 5s; }
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
         </style>
     </head>
     <body>
-        <img class="bg" src="backgrounds/thank_you.png">
+        <div class="fade-in-image"><img class="bg" src="backgrounds/thank_you.png"></div>
     </body>
 </html>
