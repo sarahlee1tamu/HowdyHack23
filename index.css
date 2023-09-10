@@ -238,9 +238,11 @@ a#next_page_button{
 
 .cost_label {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	bottom: 10%;
+	/* justify-content: center;
+	align-items: center; */
+    position: absolute;
+                bottom: -2%;
+                right: 60%;
 }
 .header {
     text-align: center;
@@ -248,19 +250,30 @@ a#next_page_button{
 
 h1 {
     font: 4rem 'Bevan', serif;
-    color: #f9da8a;
+    color: #e2a817;
+}
+h2 {
+    font: 4rem 'Bevan', serif;
+    font-size: 40px;
+    color: #e2a817;
 }
 
 .nextbutt {
-	left: 46%;
-	position: absolute;
+	/* left: 1%; */
+	/* position: a; */
 	font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+                bottom: -2%;
+                right: 30%;
 }
 
 .nextbutt button {
 	font-size: xx-large;
-    font-family:inherit;
+    font: 2rem 'Bevan', serif;
     border: 5px solid white;
     border-radius: 10px;
     background-color: #ebe3e5;
+    color:#e2a817;
+    cursor: pointer;
 }
