@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Home | Your Diner </title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">Your Diner</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Checkout</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="home"></section>
+  <div class="text">
+    <p><h2>Home</h2></p>
+    <p>At "Your Diner", we believe that every day should begin with a delicious and hearty breakfast. Our passion for serving you the best morning meals drives everything we do.
+<br><br>
+      <h3>Why Choose "YOUR DINER"?</h3>
+      <br>
+      <b>🌞 Quality Ingredients:</b> We source the freshest ingredients to create mouthwatering dishes that will tantalize your taste buds.
+      <br>
+      <b>🌞 Diverse Menu:</b> Whether you're craving classic pancakes and bacon or want to explore unique breakfast creations, our diverse menu has something for everyone.
+      <br>
+      <b>🌞 Warm Atmosphere:</b> Step into our cozy diner, where friendly smiles and warm hospitality await you. It's like breakfast at home, but even better.
+      <br>
+      <b>🌞 Local Favorites:</b> We take pride in offering breakfast dishes inspired by local flavors, ensuring you experience the essence of our community.
+      <br>
+      <b>🌞 Family Friendly:</b> Sunrise Delights is a place where families gather, friends reunite, and memories are made. Kids are more than welcome here!
+      <br>
+      <b>🌞 Daily Specials:</b> Be sure to check out our daily specials for exciting breakfast surprises that will keep you coming back for more.
+      <br>
+      
+      <br>
+      Whether you're an early riser or prefer a leisurely brunch, we're here to make your entire day special. Start your day YOUR way.
+      <br>
+      Explore our menu, learn about our story, and discover the breakfast delights that await you. We can't wait to serve you the most important meal of the day!</p>
+    
+  </div>
+
+  <script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</body>
+</html>
