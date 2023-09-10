@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <style>
             body {
                 display: flex;
@@ -14,9 +17,16 @@
                 width: 100%;
                 margin: 0;
             }
+
+            .fade-in-image { animation: fadeIn 5s; }
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
         </style>
     </head>
     <body>
-        <img class="bg" src="backgrounds/thank_you.png">
+        <div class="fade-in-image"><img class="bg" src="backgrounds/thank_you.png"></div>
     </body>
 </html>

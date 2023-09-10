@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&display=swap" rel="stylesheet">
+        <script>
+            function clicker() {
+              window.location = "thanks.html";  
+            }
+        </script>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                overflow: hidden;
+                font-family: 'Bubblegum Sans', cursive;
+            }
+            label {
+                font-family: 'Bubblegum Sans', cursive;
+            }
+            h1 {
+                font-family: 'Bungee Inline', cursive;
+            }
+            .bg {
+                /*fitting*/
+                width: 100%;
+                margin: 0;
+            }
+            .paper {
+                position: absolute;
+            }
+            .butt {
+                position: absolute;
+                bottom: 16%;
+                font-size: large;
+                font-family: inherit;
+                border: 1px solid darkgrey;
+                border-radius: 10px;
+                background-color: #ebe3e5;
+            }
+            .icon {
+                position: absolute;
+                width: 200px;
+                height: 200;
+                top: 1%;
+                left: 30%;
+                transform: rotate(-10deg);
+            }
+            .txt {
+                position: absolute;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img class="bg" src="backgrounds/purple.jpg">
+        <img class="paper" src="backgrounds/paper.jpg">
+        <img class="icon" src="backgrounds/icon.png">
+        <div class="txt">
+        <h1>Here's Your Order<br>Details, Olivia!</h1>
+        <br>
+        <ul>
+            <li>Funky Monkey - $8.99</li>
+            <li>Funky Monkey - $8.99</li>
+            <li>Rio's Diner Brew - $1.99</li>
+        </ul>
+        <br>
+        <p>Total Cost - $19.97</p>
+        <br>
+        </div>
+    <frame src="links.htm" frameborder=0></frame>
+    <button class="butt" onclick="window.location='thanks.html';">Confirm Order</button>
+    </body>
+</html>

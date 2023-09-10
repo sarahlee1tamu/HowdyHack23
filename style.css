@@ -17,7 +17,7 @@ body, html {
 }
 
 .butt {
-    bottom: 10%;
+    bottom: 6%;
     left: 42%;
     position: absolute;
     font-family: inherit;
@@ -34,5 +34,12 @@ body, html {
 .icon {
     position: absolute;
     left: 15%;
-    top: -20%;
+    top: -18%;
 }
+
+.fade-in-image { animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
