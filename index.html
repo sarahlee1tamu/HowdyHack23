@@ -2,7 +2,7 @@
 <html>
  
 <head>
-        <title>Moleskine Notebook with jQuery Booklet</title>
+        <title>Your Diner</title>
          
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     
@@ -25,15 +25,15 @@
 	padding:0;
 }
 body{
-	background:#fddca5;	
+	background:#f8ebd6;	
 	color:#444;
-	font-size:12px;
+	font-size:11px;
 	color: #333;
     font-family: 'Oswald', sans-serif;
 }
+
  
- 
-.booklet           {
+.booklet{
 	width:900px;
 	height:607px;
 	position:relative;
@@ -89,7 +89,7 @@ body{
 	background:transparent url(images/bg.png) no-repeat 9px 27px;
 }
 .book_wrapper h1{
-	color:orange;
+	color:rgb(255, 0, 208);
 	margin:5px 5px 5px 15px;
 	font-size:24px;
 	background:transparent url(images/h1.png) no-repeat bottom left;
@@ -135,7 +135,16 @@ body{
 .booklet .b-wrap-right img{
 	border:1px solid #E6E3C2;
 }
-a#next_page_button,
+a#next_page_button{
+	display:none;
+	position:absolute;
+	width:41px;
+	height:40px;
+	cursor:pointer;
+	margin-top:-20px;
+	top:50%;
+	background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
 a#prev_page_button{
 	display:none;
 	position:absolute;
@@ -175,18 +184,27 @@ a#prev_page_button:hover{
 			<div id="mybook" style="display:none;">
 				<div class="b-load">
 					<div>
-						<img src="images/1.jpg" alt="" style="width:50px;height:60px">
 						<h1>ALL-DAY BREAKFAST</h1>
+						<img src="images/1.jpg" alt="" style="width:50px;height:60px">
+						
 						<h3>Pancakes</h3>
 						<br>
 						<ul>
-						<li><b>Berrylicious Pancakes - $7.99 </b> A colorful, berry-filled pancake extravaganza featuring a medley of fresh strawberries, blueberries, and raspberries. Crowned with a swirl of vanilla cream and a dusting of powdered sugar for that classic diner touch.</li>
+						<li><b>Berrylicious Pancakes - $7.99 </b>
+						<br>&emsp;
+							A colorful, berry-filled pancake extravaganza featuring a medley of fresh strawberries, blueberries, and raspberries. Crowned with a swirl of vanilla cream and a dusting of powdered sugar for that classic diner touch.</li>
 						<br>
-						<li><b>Funky Monkey Pancakes - $8.99 </b> A stack of fluffy pancakes infused with ripe banana slices and rich chocolate chips, topped with a decadent caramel sauce and a sprinkle of powdered sugar.</li>
+						<li><b>Funky Monkey Pancakes - $8.99 </b> 
+						<br>&emsp;
+							A stack of fluffy pancakes infused with ripe banana slices and rich chocolate chips, topped with a decadent caramel sauce and a sprinkle of powdered sugar.</li>
 						<br>
-						<li><b>Honey Heaven Pancakes:</b> Classic buttermilk pancakes drizzled with warm, golden honey, creating a sweet and comforting breakfast that tastes like a warm embrace.</li>
+						<li><b>Honey Heaven Pancakes - $7.99</b> 
+						<br>&emsp;
+						Classic buttermilk pancakes drizzled with warm, golden honey, creating a sweet and comforting breakfast that tastes like a warm embrace.</li>
 						<br>
-						<li><b>Chocoholic Pancakes:</b> Decadent buttermilk pancakes infused with rich cocoa, topped with a velvety chocolate sauce, and garnished with chocolate shavings for an indulgent chocolate lover's dream.</li>
+						<li><b>Chocoholic Pancakes - $8.99</b> 
+							<br>&emsp;
+							Decadent buttermilk pancakes infused with rich cocoa, topped with a velvety chocolate sauce, and garnished with chocolate shavings for an indulgent chocolate lover's dream.</li>
 						<!-- <a href="" class="article">ARTICLE</a>
 						<a href="" class="demo">DEMO</a> -->
 					</ul>
@@ -194,6 +212,7 @@ a#prev_page_button:hover{
 					<div>
 						<img src="images/2.jpg" alt="" />
 						<h5>Waffles</h5>
+						<br>
 						<li>Southern Fried Chicken & Waffles: A classic Southern comfort dish featuring crispy fried chicken served on top of a golden, fluffy waffle. Drizzled with warm maple syrup, this dish strikes the perfect balance between sweet and savory.</li>
                         <li>Confetti Celebration Waffles: These whimsical waffles are like a party on a plate! Sprinkled with colorful confetti sprinkles and topped with a dollop of whipped cream, they're a delightful treat that will make your taste buds dance.</li>
                         <li>Waffle Sundae Extravaganza: Indulge in a sweet sensation with our Waffle Sundae Extravaganza. A warm, crispy waffle serves as the base for a scoop of creamy vanilla ice cream, generously drizzled with hot fudge, and finished with whipped cream and a cherry on top. It's the ultimate dessert-meets-breakfast experience.</li>
