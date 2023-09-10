@@ -34,7 +34,7 @@ body, html {
 .icon {
     position: absolute;
     left: 15%;
-    top: -20%;
+    top: -18%;
 }
 
 .fade-in-image { animation: fadeIn 5s; }
