@@ -241,7 +241,7 @@ a#next_page_button{
 	/* justify-content: center;
 	align-items: center; */
     position: absolute;
-                bottom: -2%;
+                bottom: 5%;
                 right: 60%;
 }
 .header {
@@ -264,7 +264,7 @@ h2 {
 	font-family: inherit;
     cursor: pointer;
     position: absolute;
-                bottom: -2%;
+                bottom: 5%;
                 right: 30%;
 }
 
