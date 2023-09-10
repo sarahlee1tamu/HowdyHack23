@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&display=swap" rel="stylesheet">
+        <script>
+            function clicker() {
+              window.location = "thanks.html";  
+            }
+        </script>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                overflow: hidden;
+                font-family: 'Bubblegum Sans', cursive;
+            }
+            label {
+                font-family: 'Bubblegum Sans', cursive;
+            }
+            h1 {
+                font-family: 'Bungee Inline', cursive;
+            }
+            .bg {
+                /*fitting*/
+                width: 100%;
+                margin: 0;
+            }
+            .form {
+                position: absolute;
+                bottom: 20%;
+            }
+            .paper {
+                position: absolute;
+            }
+            .cash {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                bottom: 3%;
+                right: 3%;
+            }
+            .butt {
+                position: absolute;
+                bottom: 16%;
+                font-size: large;
+                font-family: inherit;
+                border: 1px solid darkgrey;
+                border-radius: 10px;
+                background-color: #ebe3e5;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <img class="bg" src="backgrounds/purple.jpg">
+        <img class="paper" src="backgrounds/paper.jpg">
+        <img class="cash" src="backgrounds/cash.gif">
+        
+    
+    
+    <form class="form">
+        <h1>Checkout</h1>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name"><br><br><br>
+
+        <!-- Card Info -->
+        <label for="card_type">Card Type:</label><br>
+        <input type="radio" id="debit" name="card_type" value="debit">
+        <label for="debit">Debit</label><br>
+        <input type="radio" id="credit" name="card_type" value="credit">
+        <label for="credit">Credit</label><br>
+        <input type="radio" id="paypal" name="card_type" value="paypal">
+        <label for="paypal">PayPal</label><br><br>
+
+        <label for="card">Card Number:</label><br>
+        <input type="text" id="card" name="card"><br><br>
+
+        <label for="date">Exiration Date:</label><br>
+        <input type="text" id="date" name="date"><br><br>
+
+        <label for="code">Security Code:</label><br>
+        <input type="text" id="code" name="code"><br><br><br><br>
+    </form>
+    <frame src="links.htm" frameborder=0></frame>
+    <button class="butt" onclick="window.location='thanks.html';">Purchase</button>
+    </body>
+</html>

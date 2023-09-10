@@ -1,0 +1,38 @@
+body, html {
+    width: 100%;
+    margin: 0pt;
+    overflow: hidden;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.bg {
+    /*fitting*/
+    width: 100%;
+    opacity: 80%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0pt;
+    
+}
+
+.banner {
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.butt {
+    bottom: 20%;
+    left: 42%;
+    position: absolute;
+}
+
+.butt button {
+    font-size: xx-large;
+    font-family:inherit;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: #ebe3e5;
+}
