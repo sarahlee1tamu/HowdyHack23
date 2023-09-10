@@ -248,3 +248,17 @@ h1 {
         -3px -3px 0 #000,
         3px -3px 0 #000;
 }
+
+.nextbutt {
+	left: 46%;
+	position: absolute;
+	font-family: inherit;
+}
+
+.nextbutt button {
+	font-size: xx-large;
+    font-family:inherit;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: #ebe3e5;
+}
