@@ -16,15 +16,8 @@ body, html {
     
 }
 
-.banner {
-    opacity: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .butt {
-    bottom: 20%;
+    bottom: 10%;
     left: 42%;
     position: absolute;
     font-family: inherit;
@@ -36,4 +29,10 @@ body, html {
     border: 5px solid white;
     border-radius: 10px;
     background-color: #ebe3e5;
+}
+
+.icon {
+    position: absolute;
+    left: 15%;
+    top: -20%;
 }
