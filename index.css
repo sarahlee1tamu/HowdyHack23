@@ -277,3 +277,11 @@ h2 {
     color:#e2a817;
     cursor: pointer;
 }
+
+.icon {
+	position: absolute;
+	height: 300;
+	width: 300;
+	top: -2%;
+	left: 0%;
+}
